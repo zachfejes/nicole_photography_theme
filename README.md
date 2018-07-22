@@ -1,1 +1,1 @@
-"# nicole_photography_theme" 
+# nicole_photography_theme

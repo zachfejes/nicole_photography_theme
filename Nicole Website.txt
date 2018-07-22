@@ -1,0 +1,72 @@
+h1
+https://fonts.google.com/specimen/Cinzel?selection.family=Cinzel
+font-size: 42px;
+font-weight: 500;
+line-height: 50px;
+#404141
+
+h2
+https://fonts.google.com/specimen/Quattrocento+Sans
+font-size: 24px;
+font-weight: 500;
+letter-spacing: 1.2px;
+line-height: 24px;
+uppercase
+#404141
+
+h3
+https://fonts.google.com/specimen/Cinzel?selection.family=Cinzel
+font-size: 24px;
+line-height: 26.4px;
+font-weight: 500;
+#404141
+
+h4
+https://fonts.google.com/specimen/Quattrocento+Sans
+font-size: 12px;
+letter-spacing: 1.2px;
+line-height: 24px;
+#404141
+
+
+navLinks
+https://fonts.google.com/specimen/Quattrocento+Sans
+font-size: 12px;
+letter-spacing: 1.2px;
+line-height: 24px;
+uppercase
+#404141
+
+
+p
+https://fonts.google.com/specimen/Quattrocento+Sans
+font-size: 14px;
+line-height: 24px;
+font-weight: 400;
+font-style: normal;
+#404141
+
+
+
+a
+https://fonts.google.com/specimen/Quattrocento+Sans
+font-size: 12px;
+letter-spacing: 1.2px;
+line-height: 24px;
+#00587b
+
+a:hover
+#0d4568
+
+
+
+quotations
+https://fonts.google.com/specimen/Quattrocento+Sans
+500, 22px, line-height: 37.4px
+
+
+
+
+h2
+museo-sans, uppercase, 500, 24px, line-height: 24px;
+https://fonts.google.com/specimen/Quattrocento+Sans
