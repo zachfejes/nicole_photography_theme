@@ -6,6 +6,13 @@
       <p>
         <a href="#">Back to top</a>
       </p>
+
+      <ul>
+        <li><a href="<?php echo get_option('instagram'); ?>">Instagram</a></li>
+        <li><a href="<?php echo get_option('twitter'); ?>">Twitter</a></li>
+        <li><a href="<?php echo get_option('facebook'); ?>">Facebook</a></li>
+      </ul>
+
     </footer>
 
     <?php wp_footer(); ?>
