@@ -1,0 +1,77 @@
+html,
+body,
+div.site-root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+div.site-root {
+    background-color: #fcf1ed;
+    padding-top: 90px;
+}
+
+.header {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    position: fixed;
+    top: -110px;
+    left: 0;
+    padding-left: 133px;
+    padding-right: 133px;
+    box-shadow: 0 0 10px 0px rgba(0,0,0,0.2);
+    background-color: #FFFFFF;
+    z-index: 10;
+    transition: 300ms ease-out;
+    -moz-transition: 300ms ease-out;
+    -o-transition: 300ms ease-out;
+    -webkit-transition: 300ms ease-out;
+}
+.header.show {
+    top: 0;
+    left: 0;
+}
+
+.header > table {
+    width: 100%;
+    height: 100%;
+}
+
+.header > table > tbody > tr > td:nth-child(1) {
+    text-align: left;
+}
+.header > table > tbody > tr > td:nth-child(2) {
+    text-align: right;
+}
+
+.header a > img {
+    max-width: 60px;
+}
+
+.header nav,
+.header nav > li {
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
+    display: inline-block;
+}
+
+.header nav > li {
+    margin-right: 20px;
+}
+
+.header nav > li:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.header nav > li > a,
+.header nav > li > a:hover,
+.header nav > li > a:visited,
+.header nav > li > a:focus {
+    text-transform: uppercase;
+    color: #404041;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}

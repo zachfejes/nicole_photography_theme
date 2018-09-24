@@ -1,0 +1,4 @@
+table.photoStoryAdminTable ul.galleryList > li {
+    display: inline-block;
+    width: 160px;
+}

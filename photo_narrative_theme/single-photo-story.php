@@ -5,7 +5,7 @@
 
 			<?php 
 				if ( have_posts() ) : while ( have_posts() ) : the_post();
-  	
+
 					get_template_part( 'content-single-photo-story', get_post_format() );
   
 				endwhile; endif; 

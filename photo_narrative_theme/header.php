@@ -19,16 +19,23 @@
 
   <body>
 
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-            <a class="blog-nav-item active" href="#">Home</a>
-			      <?php wp_list_pages( '&title_li=' ); ?>
-        </nav>
-      </div>
+    <div id="headerBar" class="header show">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="logo" /></a>
+              </td>
+
+              <td>
+                <nav>
+                    <?php wp_list_pages( '&title_li=' ); ?>
+                </nav>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
     </div>
 
-    <div class="container">
-
-        <div class="blog-header">
-        </div>
+    <div class="container-fluid site-root">
