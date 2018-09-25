@@ -24,7 +24,8 @@
 
 .photo-story .story-gallery {
     width: 100%;
-    padding: 0 0 30px 0;
+    padding: 0;
+	margin-bottom: 80px;
 }
 .photo-story .story-gallery > ul {
     float: left;
@@ -203,3 +204,12 @@
   .demo:hover {
     opacity: 1;
   }
+
+.clearfix {
+  clear: both;
+}
+.clearfix:after {
+  clear: both; 
+  content: "";
+  display: table; 
+}

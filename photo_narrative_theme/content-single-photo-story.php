@@ -12,7 +12,7 @@
 		</p>
 	</section>
 
-	<section class="story-gallery">
+	<section class="story-gallery clearfix">
 
 		<?php
 
