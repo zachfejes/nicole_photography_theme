@@ -1,209 +1,210 @@
 .photo-story {
-    width: 100%;
-    height: 100%;
-    min-height: calc(100vh - 90px);
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 90px);
 }
 
 .photo-story section.landing {
-    width: 600px;
-    min-height: calc(100vh - 90px);
-    margin: auto;
-    padding-top: 70px;
-	margin-bottom: 80px;
+  width: 600px;
+  max-width: 100%;
+  min-height: calc(100vh - 90px);
+  margin: auto;
+  padding-top: 70px;
+  margin-bottom: 80px;
 }
 
 .photo-story section.landing .story-title {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .photo-story section.landing .story-narrative {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
 
 .photo-story .story-gallery {
-    width: 100%;
-    padding: 0;
-	margin-bottom: 80px;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 80px;
 }
 .photo-story .story-gallery > ul {
-    float: left;
-    width: 33.15%;
-    max-width: calc(100%/3);
-    list-style: none;
-    padding: 0;
+  float: left;
+  width: 33.15%;
+  max-width: calc(100%/3);
+  list-style: none;
+  padding: 0;
 }
 .photo-story .story-gallery > ul > li {
-    width: 100%;
-    max-width: 100%;
-    padding: 5px;
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
 }
 
 .photo-story .story-gallery > ul > li > .photoContainer {
-    position: relative;
-	width: 100%;
-	overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .photo-story .story-gallery > ul > li > .photoContainer > img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 
 .photo-story .story-gallery > ul > li > .photoContainer > img + div.hoverEffect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    background-color: #000000;
-    z-index: 1;
-    pointer-events: none;
-    transition: 300ms ease-out;
-	-o-transition: 300ms ease-out;
-	-moz-transition: 300ms ease-out;
-	-webkit-transition: 300ms ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: #000000;
+  z-index: 1;
+  pointer-events: none;
+  transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
 }
 .photo-story .story-gallery > ul > li > .photoContainer > img:hover + div.hoverEffect {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .photo-story .story-gallery > ul > li > .photoContainer > img + div.hoverEffect > div {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    border: 2px solid #FFFFFF;
-    transition: 300ms ease-out;
-	-o-transition: 300ms ease-out;
-	-moz-transition: 300ms ease-out;
-	-webkit-transition: 300ms ease-out;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border: 2px solid #FFFFFF;
+  transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
 }
 .photo-story .story-gallery > ul > li > .photoContainer > img:hover + div.hoverEffect > div {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
 }
 
 
 /* The Modal (background) */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 500;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-	max-height: 100vh;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.95);
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: transparent;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
-	text-align: center;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    position: absolute;
-    top: 80px;
-    right: 40px;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* Hide the slides by default */
-  .mySlides {
-    display: none;
-  }
+  display: none;
+  position: fixed;
+  z-index: 500;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.95);
+}
 
-	.mySlides > img {
-		height: 70vh;
-		max-height: 70vh;
-		width: auto;
-		margin: auto;
-	}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: transparent;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
 
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* Caption text */
-  .caption-container {
-    text-align: center;
-    background-color: transparent;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  img.demo {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides > img {
+  height: 70vh;
+  max-height: 70vh;
+  width: auto;
+  margin: auto;
+}
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: transparent;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
 
 .clearfix {
   clear: both;
