@@ -1,39 +1,45 @@
-<?php /* Template Name: Photo Stories Page */ ?>
+<?php /* Template Name: Home Page */ ?>
 <?php get_header(); ?>
 
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-12 noPadding">
 
-			<?php 
-				$args =  array( 
-					'post_type' => 'photo-story',
-					'orderby' => 'menu_order',
-					'order' => 'ASC'
-				);
-				$custom_query = new WP_Query( $args );
-            	while ($custom_query->have_posts()) : $custom_query->the_post(); 
-					$meta = get_post_meta( $post->ID, 'your_fields', true ); ?>
+			<div class="home">
 
-				<div class="blog-post">
-					<h2 class="blog-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
+				<section class="landing">
+					<div class="carousel">
+						<ul>
 
-					<?php if ( has_post_thumbnail() ) {?>
-						<div class="row">
-							<div class="col-md-4">
-								<?php	the_post_thumbnail('thumbnail'); ?>
-							</div>
-							<div class="col-md-6">
-								<?php the_excerpt(); ?>
-							</div>
-						</div>
-						<?php } else { ?>
-						<?php the_excerpt(); ?>
-					<?php } ?>
+						<?php 
+							$args =  array( 
+								'numberposts' => '5',
+								'post_type' => 'photo-story',
+							);
+							$custom_query = new WP_Query( $args );
+							while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
-				</div><!-- /.blog-post -->
+								<li>
+									<?php 
+										$img_args = array(
+											'class' => 'carouselImage', 
+											'title' => $post->post_title,
+											'alt' => $post->post_title
+										);
+										the_post_thumbnail('full', $img_args); 
+									?>
+									<a href="<?php echo get_permalink($post->ID); ?>">Read Story</a>
+									<p><?php echo $post->post_title; ?></p>
+								</li>
 
-				<?php endwhile; ?>
+							<?php
+							endwhile;
+							wp_reset_query();
+							?>
+						</ul>
+					</div>
+				</section>
+			</div>
+
 		</div> <!-- /.col -->
 	</div> <!-- /.row -->
 

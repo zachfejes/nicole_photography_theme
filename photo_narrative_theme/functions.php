@@ -8,6 +8,7 @@ function photo_narrative_scripts() {
 	wp_enqueue_style( 'footer', get_template_directory_uri() . '/css/footer.css', array() );
 	wp_enqueue_style( 'photoStory', get_template_directory_uri() . '/css/photoStory.css', array() );
 	wp_enqueue_style( 'header', get_template_directory_uri() . '/css/header.css', array() );
+	wp_enqueue_style( 'homePage', get_template_directory_uri() . '/css/homePage.css', array() );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
 	wp_enqueue_script( 'headerScrollControl', get_template_directory_uri() . '/js/headerScrollControl.js', array() );
 	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js', array() );

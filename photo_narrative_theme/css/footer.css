@@ -48,10 +48,13 @@
     width: 60%;
 	height: 100%;
 }
+.footer > .footerMain > table > tbody > tr:nth-child(2) {
+	display: none;
+}
 .footer > .footerMain > table > tbody > tr > th {
 	text-align: right;
 	text-transform: uppercase;
-	vertical-align: center;
+	vertical-align: middle;
 }
 .footer > .footerMain > table > tbody > tr > td {
 	width: 50%;
@@ -59,7 +62,7 @@
 	max-width: 50%;
 	text-align: left;
 	padding-left: 50px;
-	vertical-align: center;
+	vertical-align: middle;
 }
 .footer > .footerMain ul {
 	padding: 0;
@@ -86,7 +89,7 @@
     width: 100%;
     height: auto;
     background-color: #0d4568;
-	padding: 0 133px;
+	padding: 0 20px;
 	text-align: center;
 }
 
@@ -96,4 +99,161 @@
 	color: #ffffff;
 	margin: 0;
 	font-size: 12px;
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.footer > .toTop {
+		right: 20px;
+	}
+	
+	.footer > .footerMain {
+		padding: 20px 50px;
+	}
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.footer > .toTop {
+		right: 20px;
+	}
+	
+	.footer > .footerMain {
+		padding: 20px 50px;
+	}
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.footer > .toTop {
+		right: 20px;
+	}
+	
+	.footer > .footerMain {
+		padding: 20px 50px;
+	}
+	.footer > .footerMain > table {
+		width: 50%;
+		height: 100%;
+	}
+	.footer > .footerMain > table > tbody > tr:nth-child(1) > td {
+		display: none;
+	}
+	.footer > .footerMain > table > tbody > tr:nth-child(2) {
+		display: table-row;
+	}
+	.footer > .footerMain > table > tbody > tr > th {
+		text-align: left;
+		text-transform: uppercase;
+		vertical-align: middle;
+		font-size: 16px;
+	}
+	.footer > .footerMain > table > tbody > tr > td {
+		width: 50%;
+		min-width: 50%;
+		max-width: 50%;
+		text-align: left;
+		padding-left: 0px;
+		vertical-align: middle;
+	}
+	.footer > .footerMain ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.footer > .footerMain ul > li {
+		display: inline-block;
+	}
+	.footer > .footerMain ul > li > a {
+		text-decoration: none;
+		color: #999;
+		font-size: 24px;
+		margin-left: 10px;
+	}
+	.footer > .footerMain ul > li:nth-child(1) > a {
+		margin-left: 0;
+	}
+	.footer > .footerMain ul > li > a:hover {
+		color: #0d4568;
+	}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.footer > .toTop {
+		right: 20px;
+	}
+	
+	.footer > .footerMain {
+		padding: 20px 20px;
+	}
+	.footer > .footerMain > table {
+		width: 50%;
+		height: 100%;
+	}
+	.footer > .footerMain > table > tbody > tr:nth-child(1) > td {
+		display: none;
+	}
+	.footer > .footerMain > table > tbody > tr:nth-child(2) {
+		display: table-row;
+	}
+	.footer > .footerMain > table > tbody > tr > th {
+		text-align: left;
+		text-transform: uppercase;
+		vertical-align: middle;
+		font-size: 16px;
+	}
+	.footer > .footerMain > table > tbody > tr > td {
+		width: 50%;
+		min-width: 50%;
+		max-width: 50%;
+		text-align: left;
+		padding-left: 0px;
+		vertical-align: middle;
+	}
+	.footer > .footerMain ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.footer > .footerMain ul > li {
+		display: inline-block;
+	}
+	.footer > .footerMain ul > li > a {
+		text-decoration: none;
+		color: #999;
+		font-size: 24px;
+		margin-left: 10px;
+	}
+	.footer > .footerMain ul > li:nth-child(1) > a {
+		margin-left: 0;
+	}
+	.footer > .footerMain ul > li > a:hover {
+		color: #0d4568;
+	}
 }
