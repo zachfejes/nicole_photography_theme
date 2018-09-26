@@ -27,8 +27,10 @@
 										);
 										the_post_thumbnail('full', $img_args); 
 									?>
-									<a href="<?php echo get_permalink($post->ID); ?>">Read Story</a>
-									<p><?php echo $post->post_title; ?></p>
+									<div class="titles">
+										<p><?php echo $post->post_title; ?></p>
+										<a href="<?php echo get_permalink($post->ID); ?>">Read Story</a>
+									</div>
 								</li>
 
 							<?php
