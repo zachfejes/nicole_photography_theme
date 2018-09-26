@@ -71,7 +71,7 @@
 	</section>
 
 	<div id="myModal" class="modal">
-		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<button class="close cursor" onclick="closeModal()"><i class="fa fa-times"></i></button>
 		<div class="modal-content">
 
 			<?php
