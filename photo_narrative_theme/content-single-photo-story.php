@@ -1,54 +1,103 @@
-</div><!-- /.container -->
+<?php ?>
+<div class="photo-story">
+	<section class="landing">
+		<h1 class="story-title">
+			<?php the_title(); ?>
+		</h1>
 
+		<hr />
 
-<footer class="footer">
-  <div class="toTop">
-	<a href="#"><i class="fas fa-chevron-up"></i></a>
-  </div>
+		<p class="story-narrative">
+			<?php the_content(); ?>
+		</p>
+	</section>
 
-  <div class="footerMain">
-	<table>
-	  <tbody>
-		<tr>
-		  <th>Get in touch</th>
-		  <td>
-			<ul>
-			  <li><a class="instagram" href="<?php echo get_option('instagram'); ?>"><i class="fab fa-instagram"></i></a></li>
-			  <li><a class="twitter" href="<?php echo get_option('twitter'); ?>"><i class="fab fa-twitter-square"></i></a></li>
-			  <li><a class="facebook" href="<?php echo get_option('facebook'); ?>"><i class="fab fa-facebook-square"></i></a></li>
-			</ul>
-		  </td>
-		</tr>
-		<tr>
-		  <td>
-			<ul>
-			  <li><a class="instagram" href="<?php echo get_option('instagram'); ?>"><i class="fab fa-instagram"></i></a></li>
-			  <li><a class="twitter" href="<?php echo get_option('twitter'); ?>"><i class="fab fa-twitter-square"></i></a></li>
-			  <li><a class="facebook" href="<?php echo get_option('facebook'); ?>"><i class="fab fa-facebook-square"></i></a></li>
-			</ul>
-		  </td>
-		</tr>
-	  </tbody>
-	</table>
-  </div>
+	<section class="story-gallery clearfix">
 
-  <div class="subfooter">
-	<p>2017-2018 Nicole Cyhelka | All Rights Reserved</p>
-  </div>
-</footer>
+		<?php
 
-<?php wp_footer(); ?>
-</body>
-</html>
+			$meta = get_post_meta($post->ID, 'story_photos_meta_box_gallery', true);
+			$meta_html = null;
+			if ($meta) {
+					// $meta_html .= '<ul class="galleryList">';
+					$meta_array = explode(',', $meta);
+					$num_of_photos = sizeof($meta_array);
+					$i = 0;
+					$n = 1;
+					$extra = floor($num_of_photos/3);
 
-<!--
-  <p>
-	<a href="#">Back to top</a>
-  </p>
+					foreach ($meta_array as $meta_gall_item) {
+						$col_length = floor($num_of_photos/3);
+						if($extra > 0) {
+							$col_length += 1;
+						}
 
-  <ul>
-	<li><a href="<?php //echo get_option('instagram'); ?>">Instagram</a></li>
-	<li><a href="<?php //echo get_option('twitter'); ?>">Twitter</a></li>
-	<li><a href="<?php //echo get_option('facebook'); ?>">Facebook</a></li>
-  </ul>
--->
+						if($i == 0 || $i % $col_length == 0) {
+							?>
+								<ul>
+							<?php
+						}
+						?>
+						
+							<li>
+								<div class="photoContainer">
+									<img 
+										id="<?php echo esc_attr($meta_gall_item); ?>" 
+										src="<?php echo wp_get_attachment_url($meta_gall_item); ?>"
+										onclick="openModal();currentSlide(<?php echo $n; ?>)"
+									>
+									<div class="hoverEffect"><div /></div>
+								</div>
+							</li>
+
+						<?php
+
+						if($i % $col_length == $col_length - 1) {
+							?>
+								</ul>
+							<?php
+							
+							$extra--;
+							$i = -1;
+						}
+
+						$i++;
+						$n++;
+					}
+			}
+
+		?>
+
+	</section>
+
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<?php
+				$i = 1;
+				foreach ($meta_array as $meta_gall_item) {
+					?>
+						<div class="mySlides">
+							<div class="numbertext"><?php echo $i.'/'.$num_of_photos; ?></div>
+							<img src="<?php echo wp_get_attachment_url($meta_gall_item); ?>">
+						</div>
+					<?php
+					$i++;
+				}
+			?>
+
+			<!-- Next/previous controls -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<!-- Caption text -->
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+		</div>
+	</div>
+
+</div><!-- /.blog-post -->
