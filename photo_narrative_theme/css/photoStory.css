@@ -38,12 +38,17 @@
 }
 
 .photo-story .story-gallery > ul {
+  opacity: 1;
   display: block;
   float: left;
   width: 33.15%;
   max-width: calc(100% / 3);
   list-style: none;
   padding: 0;
+  transition: 300ms ease;
+  -o-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -webkit-transition: 300ms ease;
 }
 
 .photo-story .story-gallery.loading .loader {
@@ -51,7 +56,7 @@
 }
 
 .photo-story .story-gallery.loading > ul {
-  display: none;
+  opacity: 0;
 }
 
 .photo-story .story-gallery > ul > li {

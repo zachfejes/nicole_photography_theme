@@ -15,7 +15,7 @@
 <div class="photo-story">
 
 	<script>
-		const galleryLoader = new photoGalleryloader(<?php echo $num_of_photos; ?>, "#story-gallery");
+		GalleryLoader.initialize(<?php echo $num_of_photos; ?>, "#story-gallery");
 	</script>
 
 	<section class="landing">
@@ -30,11 +30,12 @@
 		</p>
 	</section>
 
-	<section name="story-gallery" class="story-gallery clearfix loading">
+	<section id="story-gallery" class="story-gallery clearfix loading">
 
-		<div class="loader"><i class="fa fa-spinner-third fa-spin"></i></div>
+		<div class="loader"><i class="fa fa-spinner fa-3x fa-spin"></i></div>
 
 		<?php
+
 			if ($meta) {
 				foreach ($meta_array as $meta_gall_item) {
 					$col_length = floor($num_of_photos/3);
@@ -55,8 +56,8 @@
 									id="<?php echo esc_attr($meta_gall_item); ?>" 
 									src="<?php echo wp_get_attachment_url($meta_gall_item); ?>"
 									onclick="openModal();currentSlide(<?php echo $n; ?>)"
-									onLoad="galleryLoader.setLoadedByIndex(true, <?php echo $n - 1; ?>);"
-									onError="galleryLoader.setLoadedByIndex(true, <?php echo $n - 1; ?>);"
+									onLoad="GalleryLoader.setLoadedByIndex(true, <?php echo $n - 1; ?>);"
+									onError="GalleryLoader.setLoadedByIndex(true, <?php echo $n - 1; ?>);"
 								>
 								<div class="hoverEffect"><div /></div>
 							</div>
