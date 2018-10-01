@@ -3,6 +3,7 @@
     width: 100%;
     height: calc(100vh - 90px);
     min-height: calc(100vh - 90px);
+    overflow: hidden;
 }
 
 .home > section.landing > div.carousel {
@@ -10,7 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -18,15 +19,39 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(5*100vw);
     height: 100%;
     padding: 0;
     margin: 0;
+    transition: 1s ease;
+    -o-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -webkit-transition: 1s ease;
+}
+
+.home > section.landing > div.carousel > ul.slide0 {
+    left: 0;
+}
+.home > section.landing > div.carousel > ul.slide1 {
+    left: calc(-100vw);
+}
+.home > section.landing > div.carousel > ul.slide2 {
+    left: calc(-100vw*2);
+}
+.home > section.landing > div.carousel > ul.slide3 {
+    left: calc(-100vw*3);
+}
+.home > section.landing > div.carousel > ul.slide4 {
+    left: calc(-100vw*4);
 }
 
 .home > section.landing > div.carousel > ul > li {
     position: relative;
-    width: 100%;
+    float: left;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .home > section.landing > div.carousel > ul > li > img {
@@ -66,6 +91,76 @@
     margin: 0;
     cursor: pointer;
 }
-.home > section.landing > div.carousel > ul > li > .titles > a:hover {
 
+.home > section.landing > div.carousel > div.dotButtons {
+    position: absolute;
+	top: 80vh;
+	width: 200px;
+	left: calc(50% - 100px);
+	text-align: center;
+}
+
+.home > section.landing > div.carousel > div.dotButtons > button {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border: 2px solid #aaa;
+	margin: auto;
+	margin-left: 5px;
+	margin-right: 5px;
+	transition: 300ms ease;
+	-o-transition: 300ms ease;
+	-moz-transition: 300ms ease;
+	-webkit-transition: 300ms ease;
+}
+
+.home > section.landing > div.carousel > div.dotButtons > button:after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 5px);
+	left: calc(50% - 5px);
+	width: 10px;
+	height: 10px;
+    border: 2px solid #ffffff;
+    opacity: 0;
+    transition: 300ms ease;
+    -o-transtiioN: 300ms ease;
+    -moz-transition: 300ms ease;
+    -webkit-transition: 300ms ease;
+}
+
+.home > section.landing > div.carousel > div.dotButtons > button:hover:after {
+	content: "";
+    position: absolute;
+    opacity: 1;
+	top: calc(50% - 5px);
+	left: calc(50% - 5px);
+	width: 10px;
+	height: 10px;
+	border: 2px solid #ffffff;
+}
+
+.home > section.landing > div.carousel > div.dotButtons > button.active {
+	background-color: #aaa;
+}
+
+
+.home > section.buttonSection {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (orientation: portrait) {
+    .home > section.landing > div.carousel > ul > li > img {
+        height: 100%;
+        max-height: 100%;
+        width: auto;
+    }
 }

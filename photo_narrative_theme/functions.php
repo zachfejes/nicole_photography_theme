@@ -13,6 +13,7 @@ function photo_narrative_scripts() {
 	wp_enqueue_script( 'headerScrollControl', get_template_directory_uri() . '/js/headerScrollControl.js', array() );
 	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js', array() );
 	wp_enqueue_script( 'photoGalleryLoader', get_template_directory_uri() . '/js/photoGalleryLoader.js', array() );
+	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/js/carousel.js', array() );
 }
 add_action( 'wp_enqueue_scripts', 'photo_narrative_scripts' );
 
