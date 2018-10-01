@@ -22,8 +22,12 @@ class Carousel {
 
         this._length = length || 0;
         this._currentIndex = currentIndex || 0;
-        this._waitTime = waitTime || 5000;
+        this._waitTime = waitTime || 10000;
         this._querySelector = querySelector || "";
+        this._interval = setInterval(() => {
+            this.nextSlide();
+            clearInterval();
+        }, this._waitTime);
     }
 
     length(newLength) {
