@@ -1,4 +1,4 @@
-<?php /* Template Name: Home Page */ ?>
+<?php /* Template Name: Home */ ?>
 <?php get_header(); ?>
 
 <script>
@@ -71,47 +71,69 @@
 
 				<section class="about">
 					<div class="news">
-						<p>Nicole is currently waiting for Zach to finish her website.</p>
+						<p><i>>Nicole is currently waiting for Zach to finish her website.</i></p>
 					</div>
 					<div class="aboutPhoto">
 						<img src="" alt="This should be a photo of Nicole" />
 					</div>
 					<div class="blurb">
+						<h4>About</h4>
 						<p>This is some text that makes up a blurb about Nicole!</p>
 					</div>
 				</section>
 
-				<section class="recent">
+				<section class="featured">
 
-					<h2>Recent Stories</h2>
+					<h2>Featured Stories</h2>
 
 					<hr />
 
-					<ul>
+					<table>
+						<tbody>
+							<tr>
 						<?php
-							$args =  array( 
-								'numberposts' => '5',
-								'post_type' => 'photo-story',
+							$featured_args =  array( 
+								'post_type' => 'photo-story'
 							);
-							$custom_query = new WP_Query( $args );
-							$slideIndex = 0;
-							while ($custom_query->have_posts()) : $custom_query->the_post(); 
-						?>
-
-								<li>
-									<img src="" alt="" />
-									<div class="titles">
-										<p></p>
-										<a></a>
-									</div>
-								</li>
+							$featured_query = new WP_Query( $featured_args );
+							$i = 0;
+							while ($featured_query->have_posts()) : $featured_query->the_post();
+							
+							if($i != 0 && $i % 2 == 0) {
+								?>
+									<tr>
+								<?php
+							}	
+							?>
+								<td>
+										<?php 
+											$featured_img_args = array( 
+												'class' => '',
+												'title' => $post->post_title,
+												'alt' => $post->post_title
+											);
+											the_post_thumbnail('full', $featured_img_args); 
+										?>
+										<a class="darkLayer" href="<?php echo get_permalink($post->ID); ?>"></a>
+										<div class="titles">
+											<p><?php echo $post->post_title; ?></p>
+											<a>Read Story</a>
+										</div>
+								</td>
 
 						<?php
-								$slideIndex++;
+							if($i % 2 == 1 && $i != sizeof($featured_query) - 1) {
+								?>
+									</tr>
+								<?php
+							}
+							$i++;
 							endwhile;
 							wp_reset_query();
 						?>
-					</ul>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 			</div>
 

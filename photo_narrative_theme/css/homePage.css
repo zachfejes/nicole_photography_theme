@@ -159,3 +159,135 @@
         width: auto;
     }
 }
+
+
+.home > section.about {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.home > section.about > .news {
+    width: 600px;
+    margin: auto;
+    display: block;
+}
+
+.home > section.about > .aboutPhoto {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    padding-left: 20%;
+    padding-right: 20px;
+}
+
+.home > section.about > .aboutPhoto > img {
+    width: 100%;
+    height: auto;
+}
+
+.home > section.about > .blurb {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20%;
+}
+
+.home > section.about > .blurb > h4 {
+    margin-bottom: 20px;
+}
+
+.home > section.featured {
+	min-height: 100vh;
+    height: 100%;
+    width: 100%;
+	text-align: center;
+	padding-top: 80px;
+}
+
+.home > section.featured > h2 {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.home > section.featured > hr {
+    width: 200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.home > section.featured > table {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+
+.home > section.featured > table > tbody > tr {
+    width: 100%;
+}
+
+.home > section.featured > table > tbody > tr > td {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.home > section.featured > table > tbody > tr > td > img {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.home > section.featured > table > tbody > tr > td > .darkLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.15;
+    z-index: 1;
+    cursor: pointer;
+    transition: 300ms ease;
+    -o-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    -webkit-transition: 300ms ease;
+}
+.home > section.featured > table > tbody > tr > td > .darkLayer:hover {
+    opacity: 0.5;
+}
+
+.home > section.featured > table > tbody > tr > td > .titles {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.home > section.featured > table > tbody > tr > td > .titles > p {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.home > section.featured > table > tbody > tr > td > .titles > a {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: 0;
+    cursor: pointer;
+}

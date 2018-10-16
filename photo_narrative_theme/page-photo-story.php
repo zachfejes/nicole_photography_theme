@@ -1,4 +1,4 @@
-<?php /* Template Name: Photo Stories Page */ ?>
+<?php /* Template Name: Photo Stories */ ?>
 <?php get_header(); ?>
 
 	<div class="row">
